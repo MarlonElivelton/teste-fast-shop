@@ -1,0 +1,23 @@
+mat-card  {
+  border: #CFD8DC;
+  border-radius: 4px 3px 6px / 2px 4px;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom: 0%;
+  margin: 15px;
+  width: 450px;
+  height: 350px;
+}
+
+
+mat-accordion{
+  margin-top: -163px;
+  margin-left: -100px;
+}
+
+img{
+  width: 100%;
+  
+  margin: 0%;
+}

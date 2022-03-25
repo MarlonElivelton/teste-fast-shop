@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<body>
+
+<div>
+  <mat-toolbar color="primary">
+    <h1 routerLink="/inicio">TMDB</h1>
+  </mat-toolbar>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="end center" style="padding: 2%">
+  <mat-accordion style="padding: 2%;">
+    <mat-expansion-panel hideToggle disabled>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Ordenar
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <br>
+    <mat-expansion-panel hideToggle disabled>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filtros
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <br>
+    <mat-expansion-panel hideToggle disabled>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Onde Assistir
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+      
+  <ng-container *ngFor="let filme of filmes" style="margin: 0.5%;">
+    <mat-card fxFlex="0 1 calc(15% - 11px)" fxFlex.lt-md="0 1 calc(50%) - 11px" fxFlex.lt-sm="100%"> 
+      <mat-card-content>
+        <img (click)="onSelect(filme)" routerLink="/detalhe-filme" mat-card-xl-image src="https://image.tmdb.org/t/p/w500/{{filme.poster_path}}">
+      <br>
+      <br>
+      <mat-card-title (click)="onSelect(filme)">{{filme.original_title}}</mat-card-title>
+        <p>{{filme.release_date}}</p>
+    </mat-card-content>
+  </mat-card>
+  </ng-container> 
+</div> 
+
+</body>
+</html>
